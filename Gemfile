@@ -37,3 +37,8 @@ group :development do
   gem "rubocop-rspec", "~> 2.22", require: false
   gem "standard", "~> 1.30", require: false
 end
+
+gem "rswag-specs", "~> 2.10"
+
+gem "rswag-api", "~> 2.10"
+gem "rswag-ui", "~> 2.10"

@@ -22,6 +22,11 @@ rubocop:
 rspec:
 	bundle exec rspec
 
+.PHONY: rswag
+rswag:
+	bin/rails rswag
+	@echo "check-out the docs at http://127.0.0.1:3000/api-docs"
+
 .PHONY: build
 build: rubocop rspec
 
@@ -35,6 +40,7 @@ usage:
 	@echo "Development"
 	@echo
 	@echo "${YELLOW}make rspec${NC}        run rspec tests"
+	@echo "${YELLOW}make rswag${NC}        generate API docs via rswag"
 	@echo "${YELLOW}make rubocop${NC}      rubocop"
 	@echo "${YELLOW}make rubocop-fix${NC}  rubocop fix"
 	@echo
