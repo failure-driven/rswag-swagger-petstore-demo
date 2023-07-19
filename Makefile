@@ -18,8 +18,12 @@ rubocop-fix:
 rubocop:
 	bundle exec rubocop
 
+.PHONY: rspec
+rspec:
+	bundle exec rspec
+
 .PHONY: build
-build: rubocop
+build: rubocop rspec
 
 .PHONY: usage
 usage:
@@ -30,6 +34,7 @@ usage:
 	@echo
 	@echo "Development"
 	@echo
+	@echo "${YELLOW}make rspec${NC}        run rspec tests"
 	@echo "${YELLOW}make rubocop${NC}      rubocop"
 	@echo "${YELLOW}make rubocop-fix${NC}  rubocop fix"
 	@echo
